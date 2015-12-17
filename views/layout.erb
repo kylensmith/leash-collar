@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title><%= @title %></title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+		<link rel="stylesheet" href="/css/style.css"><link rel="stylesheet" href="/css/style.css">
+		<link href='https://fonts.googleapis.com/css?family=IM+Fell+English' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		<script src="/js/main.js"></script>
+	</head>
+<body>
+
+	<%
+		nav = ["Home", "Services", "Our Walkers", "Contact Us"] 
+		pages = ["/", "services", "walkers", "contact"] 
+	%>
+
+	<ul style="list-style-type: none; padding-left: 0">
+
+	<!-- start ruby -->	
+	<% nav.each_with_index do |nav_item, nav_index| %>
+		<li style="display:inline-block">
+			<a href="<%= pages[nav_index] %>">
+				<%= nav_item %>
+			</a>	
+		</li>
+	<% end %>
+	<!-- end ruby -->
+
+	</ul>
+
+	<!-- start ruby -->
+	<%= yield %>	
+	<!-- end ruby -->
+
+	<hr>
+	<p>Footer</p>
+
+</body>
+</html>

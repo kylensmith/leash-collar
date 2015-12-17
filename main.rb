@@ -3,7 +3,7 @@ require 'sinatra'
 require 'mandrill'
 
 get '/' do
-	@title ="Leash & Collar'
+	@title ='Leash & Collar'
 	erb :home
 end
 
@@ -14,11 +14,11 @@ end
 
 get '/walkers' do
 	@title = "Dog Walkers"
-	erb: walkers
+	erb :walkers
 end
 
 get '/contact' do
 	@title = "Conatct"
-	erb: contact
+	erb :contact
 end
 
