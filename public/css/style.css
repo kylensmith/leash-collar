@@ -47,3 +47,37 @@ footer {
 	padding: 10px;
 	height: 600px;
 }
+.body-wrap {
+	width: 800px;
+	margin: 0 auto;
+}
+
+.walker-bio {
+	width: 500px;
+}
+.walker-pic {
+	border-radius: 20px;
+	margin-left: 6px;
+}
+.walker-nametag {
+	background: #0f445e;
+	padding: 3px;
+	margin: 0 auto;
+	border-radius: .9;
+	font-size: 25px;
+	font-family: cursive;
+	font-weight: 2;
+	color: #727272;
+	text-align: center;
+}
+
+.walker-nametag:hover {
+	opacity: .8;
+}
+.walker-bio-box {
+	box-shadow: 3px, 3px, 3px, gray;
+	/*border-style: ridge;*/
+	border-color: #000000;
+	height: 300px;
+}
+
