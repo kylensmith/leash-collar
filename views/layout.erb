@@ -10,33 +10,31 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 		<script src="/js/main.js"></script>
 	</head>
-<body>
+	<body>
 
-	<%
-		nav = ["Home", "Services", "Our Walkers", "Contact Us"] 
-		pages = ["/", "services", "walkers", "contact"] 
-	%>
+		<%
+			nav = ["Home", "Services", "Our Walkers", "Contact Us"] 
+			pages = ["/", "services", "walkers", "contact"] 
+		%>
 
-	<ul style="list-style-type: none; padding-left: 0">
-
-	<!-- start ruby -->	
-	<% nav.each_with_index do |nav_item, nav_index| %>
-		<li style="display:inline-block">
-			<a href="<%= pages[nav_index] %>">
-				<%= nav_item %>
-			</a>	
-		</li>
-	<% end %>
-	<!-- end ruby -->
-
-	</ul>
-
-	<!-- start ruby -->
-	<%= yield %>	
-	<!-- end ruby -->
-
-	<hr>
-	<p>Footer</p>
-
-</body>
+		<nav>
+			<img id="name" src="images/leash-collar-name.png">
+			<img id="logo" src="images/leash-collar-logo.png">
+			<ul>
+			<!-- start ruby -->	
+			<% nav.each_with_index do |nav_item, nav_index| %>
+				<a href="<%= pages[nav_index] %>">
+					<li><%= nav_item %></li>
+				</a>	
+			<% end %>
+			<!-- end ruby -->
+			</ul>
+		</nav>
+		<div id="container">
+			<!-- start ruby -->
+			<%= yield %>	
+			<!-- end ruby -->
+		</div>
+		<footer></footer>
+	</body>
 </html>

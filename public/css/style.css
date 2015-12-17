@@ -1,0 +1,49 @@
+body {
+	background-color: #ffffff;
+}
+nav {
+	color: #ffffff;
+	background-color: #0f445e;
+	height: 100px;
+	position: fixed;
+	width: 100%;
+}
+ul {
+	list-style-type: none;
+	padding-left: 0;
+	float: right;
+	text-transform: uppercase;
+	letter-spacing: 0.075em;
+	margin: 70px 20px 0px 0px;
+}
+li {
+	display: inline-block;
+	margin-left: 15px;
+}
+#name {
+	height: 60px;
+	margin: 40px 0px 0px 20px;
+}
+#logo {
+	width: 200px;
+	margin-bottom: -8%;
+	margin-left: 8%;
+}
+a:visited {
+	color: #ffffff;
+}
+a:hover {
+	text-decoration: none;
+}
+footer {
+	clear: both;
+	background-color: rgba(114, 114, 114, 0.5);
+	height: 100px;
+	width: 100%;
+}
+#container {
+	width: 900px;
+	margin: 0 auto;
+	padding: 10px;
+	height: 600px;
+}
