@@ -1,6 +1,11 @@
 
 
 $(document).ready(function() {
+  $("#dog-run1").animate({left: '175%'}, 8300);
+  $("#dog-run2").animate({left: '175%'}, 5200);
+
+
+  console.log("run");
   $('.walker-bio-box').hide();
   
   $('.walker-nametag').click(function(e) {
@@ -21,5 +26,7 @@ setInterval(function() {
     .appendTo('#slideshow');
 },  3000);
 
+
 });
+
 
