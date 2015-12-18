@@ -78,10 +78,15 @@ footer {
 }
 
 .bio-pic {
-	width: 100px;
+	width: 25%;
+	border: 10px solid #ffffff;
+	box-shadow: 10px 10px 5px #888888;
+	margin: 10px;
+	float: left;
 }
 
 .walker-nametag {
+	clear: both;
 	background: linear-gradient(#0f445e, #0f445e, #0f445e, #0f445e, #0f445e, #0f445e, #4c767e);
 	padding: 3px;
 	margin: 0 auto;
@@ -101,7 +106,8 @@ footer {
 	/*border-style: ridge;*/
 	border-color: #000000;
 	/*height: 300px;*/
-	background-color: #ffffff;
+	background-color: rgba(114, 114, 114, 0.5);
+	height: 100%;
 }
 .slider_image {
 	width: 100%;
@@ -120,5 +126,28 @@ footer {
 }
 .clear {
 	clear: both;
+}
+.walker-name {
+	font-size: 2.5em;
+	font-weight: bold;
+	color: #4c767e;
+	text-align: center;
+	/*border: 2px solid black;*/
+}
+.about-walker {
+	float: left;
+	/*border: 2px solid blue;*/
+	width: 65%;
+	margin-left: 20px;
+	padding: 10px;
+}
+.answer {
+	font-size: 1.25em;
+}
+.topic{
+	font-weight: bold;
+	text-transform: uppercase;
+	font-size: 1.25em;
+
 }
 

@@ -10,16 +10,21 @@
 
 		<div class="walker-bio">
 
-		<div class="walker-nametag"><img class="walker-pic" src="<%= w.pic %>"><%= w.f_name %> <%= w.l_name %></div>
+			<div class="walker-nametag">
+				<img class="walker-pic" src="<%= w.pic %>">
+				<%= w.f_name %> <%= w.l_name %>
+			</div>
 
-		<div class="walker-bio-box"> <%= w.f_name %> <%= w.l_name %><img class="bio-pic" src="<%= w.pic %>">
-		<%= w.comments%><br>
-		Experience: <%= w.experience%>	</div>
+			<div class="walker-bio-box">
+				<img class="bio-pic" src="<%= w.pic %>">
+				<div class="about-walker">
+					<p class="walker-name"><%= w.f_name %> <%= w.l_name %></p>
+					<p><span class="topic">Introduction: </span><span class="answer">"<%= w.comments%>"</span></p>
+					<p><span class="topic">Experience:</span> <span class="answer"><%= w.experience%></span></p>
+					<p><span class="topic">Neighborhood:</span> <span class="answer"></span></p>
+				</div>
+			</div>
+
 		</div>
 	<%end%>
-
-	
-
-	
-
 </div>
