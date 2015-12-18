@@ -7,7 +7,7 @@ $(document).ready(function() {
     $(this).parents().children(".walker-bio-box").slideToggle('slow');
       e.preventDefault();
   });
-});
+
 
 $("#slideshow > div:gt(0)").hide();
 
