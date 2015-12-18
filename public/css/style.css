@@ -39,10 +39,11 @@ a:hover {
 }
 
 footer {
+	clear: both;
 	background-color: rgba(114, 114, 114, 0.5);
 	height: 100px;
 	width: 100%;
-	margin-top: 40px;
+	display: inline-block;
 }
 
 /*Created to space out the body from behind the nav bar*/
@@ -111,18 +112,18 @@ footer {
 }
 .slider_image {
 	width: 100%;
+	height: 100%;
 }
 #slideshow { 
     position: relative; 
     width: 100%; 
-    height: 240px; 
-   /* padding: 10px; */
-    
+    height: 100%; 
 	z-index: auto;
 }
 #slideshow > div { 
 	margin-top: 100px; 
-    position: absolute; 
+    position: absolute;
+    display: inline-block;
 }
 .clear {
 	clear: both;
@@ -148,7 +149,26 @@ footer {
 	font-weight: bold;
 	text-transform: uppercase;
 	font-size: 1.25em;
-
 }
-
-/*Dog prints*/
+#container {
+	clear: both;
+	width: 100%;
+	margin: 0 auto;
+	height: 100%;
+	margin-top: 100px;
+	display: inline-block;
+}
+.services {
+	width: 30%;
+	float: left;
+	height: 100%;
+	border: 2px solid black;
+	margin: 20px 10px 20px 10px;
+	text-align: center;
+	padding: 5px;
+}
+#all_services {
+	width: 1200px;
+	margin: 0 auto;
+	margin-top: 100px;
+}
