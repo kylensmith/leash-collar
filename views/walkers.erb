@@ -1,31 +1,25 @@
 <div class="body-wrap">
 
-	<div class="walker-nametag" class="walker-bio"> Xi Lu</div>
+	<!-- This sorts the walkers alphabetically by their last name -->
+	<% @walkers.sort! do |a,b|
+		a.l_name.downcase <=> b.l_name.downcase
+	end %>
+	
+	<!-- This will populate the number of tabs based on the people that are in the database -->
+	<% @walkers.each do |w|%> 
 
-	<div class="walker-bio-box" class="walker-bio">
+		<div class="walker-bio">
 
-	</div>
+		<div class="walker-nametag"><img class="walker-pic" src="<%= w.pic %>"><%= w.f_name %> <%= w.l_name %></div>
 
+		<div class="walker-bio-box"> <%= w.f_name %> <%= w.l_name %><img class="bio-pic" src="<%= w.pic %>">
+		<%= w.comments%><br>
+		Experience: <%= w.experience%>	</div>
+		</div>
+	<%end%>
 
-	<div class="walker-nametag" class="walker-bio"> Halid Hajar	</div>
+	
 
-
-	<div class="walker-bio-box" class="walker-bio"> 
-	</div>
-
-
-	<div class="walker-nametag" class="walker-bio">Mushari Akzedav	</div>
-
-	<div class="walker-bio-box" class="walker-bio"></div>
-
-
-	<div class="walker-nametag" class="walker-bio">John Martin</div>
-
-	<div class="walker-bio-box" class="walker-bio">	
-	</div>
-
-
-
-
+	
 
 </div>

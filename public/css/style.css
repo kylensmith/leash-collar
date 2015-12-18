@@ -35,32 +35,50 @@ a:visited {
 a:hover {
 	text-decoration: none;
 }
+
 footer {
 	clear: both;
 	background-color: rgba(114, 114, 114, 0.5);
 	height: 100px;
 	width: 100%;
+	margin-top: 40px;
 }
-#container {
-	width: 900px;
-	margin: 0 auto;
-	padding: 10px;
-	height: 600px;
+
+/*Created to space out the body from behind the nav bar*/
+#upper-spacer{
+	width:100%;
+	height: 200px;
 }
+
 .body-wrap {
+	vertical-align: 200px;
 	width: 800px;
 	margin: 0 auto;
 }
 
-.walker-bio {
+/*.walker-bio {
 	width: 500px;
+}*/
+/*hide while figuring out formatting of toggle for walkers page*/
+
+.walker-pic{
+	border-radius: 100%;
+	width: 25px;
+	margin-right: 10px;
 }
-.walker-pic {
-	border-radius: 20px;
-	margin-left: 6px;
+
+.walker-nametag:img{
+	border-radius: 100%;
+	width: 25px;
+	margin-right: 10px;
 }
+
+.bio-pic {
+	width: 100px;
+}
+
 .walker-nametag {
-	background: #0f445e;
+	background: linear-gradient(#0f445e, #0f445e, #0f445e, #0f445e, #0f445e, #0f445e, #4c767e);
 	padding: 3px;
 	margin: 0 auto;
 	border-radius: .9;
@@ -78,6 +96,10 @@ footer {
 	box-shadow: 3px, 3px, 3px, gray;
 	/*border-style: ridge;*/
 	border-color: #000000;
-	height: 300px;
+	/*height: 300px;*/
+	background-color: #ffffff;
 }
 
+/*.invis {
+	display: none;
+}*/
