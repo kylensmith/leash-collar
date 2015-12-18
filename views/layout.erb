@@ -7,6 +7,7 @@
 		<link rel="stylesheet" href="/css/style.css"><link rel="stylesheet" href="/css/style.css">
 		<link href='https://fonts.googleapis.com/css?family=IM+Fell+English' rel='stylesheet' type='text/css'>
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+		<link href='https://fonts.googleapis.com/css?family=Pathway+Gothic+One' rel='stylesheet' type='text/css'>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 		<script src="/js/script.js"></script>
 
@@ -22,27 +23,35 @@
 		<nav>
 			<img id="name" src="images/leash-collar-name.png">
 			<img id="logo" src="images/leash-collar-logo.png">
-			<ul id="nav_menu">
-			<!-- start ruby -->	
-			<% nav.each_with_index do |nav_item, nav_index| %>
-				<a href="<%= pages[nav_index] %>">
-					<li id="menu_pages"><%= nav_item %></li>
-				</a>	
-			<% end %>
-			<!-- end ruby -->
-			</ul>
+			<div class="mobile-nav">
+			    <div class="menu-btn" id="menu-btn">
+					<!-- <div></div> -->
+					<span></span>
+					<span></span>
+					<span></span>
+			    </div>
+			    <div class="responsive-menu">
+			    	<ul id="nav_menu">
+					<!-- start ruby -->	
+					<% nav.each_with_index do |nav_item, nav_index| %>
+						<a href="<%= pages[nav_index] %>">
+							<li id="menu_pages"><%= nav_item %></li>
+						</a>	
+					<% end %>
+					<!-- end ruby -->
+					</ul>
+			    </div>
+			</div>
 		</nav>
-			
-			
 
 
+
+			
+	
 			<!-- start ruby -->
 			<%= yield %>	
 			<!-- end ruby -->
-
-		</div>
-		<div class="clear">
-		</div>
+			
 		<footer></footer>
 	</body>
 </html>

@@ -1,5 +1,3 @@
-
-
 $(document).ready(function() {
   $("#dog-run1").animate({left: '175%'}, 8300);
   $("#dog-run2").animate({left: '175%'}, 5200);
@@ -13,6 +11,7 @@ $(document).ready(function() {
       e.preventDefault();
   });
 
+// slideshow
 
 $("#slideshow > div:gt(0)").hide();
 
@@ -25,6 +24,16 @@ setInterval(function() {
     .end()
     .appendTo('#slideshow');
 },  3000);
+
+
+
+// hamburger menu
+
+jQuery(function($){
+     $( '.menu-btn' ).click(function(){
+     $('.responsive-menu').toggleClass('expand')
+     })
+  })
 
 
 });
