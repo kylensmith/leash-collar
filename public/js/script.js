@@ -1,5 +1,3 @@
-
-
 $(document).ready(function() {
   $('.walker-bio-box').hide();
   
@@ -8,6 +6,7 @@ $(document).ready(function() {
       e.preventDefault();
   });
 
+// slideshow
 
 $("#slideshow > div:gt(0)").hide();
 
@@ -20,6 +19,16 @@ setInterval(function() {
     .end()
     .appendTo('#slideshow');
 },  3000);
+
+
+// hamburger menu
+
+jQuery(function($){
+     $( '.menu-btn' ).click(function(){
+     $('.responsive-menu').toggleClass('expand')
+     })
+  })
+
 
 });
 
