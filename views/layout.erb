@@ -21,11 +21,11 @@
 		<nav>
 			<img id="name" src="images/leash-collar-name.png">
 			<img id="logo" src="images/leash-collar-logo.png">
-			<ul>
+			<ul id="nav_menu">
 			<!-- start ruby -->	
 			<% nav.each_with_index do |nav_item, nav_index| %>
 				<a href="<%= pages[nav_index] %>">
-					<li><%= nav_item %></li>
+					<li id="menu_pages"><%= nav_item %></li>
 				</a>	
 			<% end %>
 			<!-- end ruby -->
@@ -40,7 +40,10 @@
 			<!-- start ruby -->
 			<%= yield %>	
 			<!-- end ruby -->
-		
+
+		</div>
+		<div class="clear">
+		</div>
 		<footer></footer>
 	</body>
 </html>
