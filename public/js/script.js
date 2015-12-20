@@ -1,6 +1,6 @@
 $(document).ready(function() {
-  $("#dog-run1").animate({left: '175%'}, 8300);
-  $("#dog-run2").animate({left: '175%'}, 5200);
+  $("#big-dog").animate({left: '130%'}, 6200); 
+  $("#little-dog").animate({left: '130%'}, 8300);
 
 
 

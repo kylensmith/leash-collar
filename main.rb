@@ -73,6 +73,12 @@ get '/contact' do
 	erb :contact
 end
 
+get '/form' do
+	@title = "Conatct"
+
+	erb :form
+end
+
 
 
 
