@@ -1,46 +1,49 @@
 <!-- KNS - inserted new div for spacing after having issues with CSS of header-->
 
-<div id="upper-spacer"></div>
+<div id="upper-spacer">.</div>
 
 <!-- ===Dog Running=== -->
-<div id="buffer">
+<div class="running">
 	
 	<img id="big-dog" src="images/walkdog.gif">
 	<img id="little-dog" src="images/walkdog.gif">
 </div>
 
 
+
+
+
 <div class="body-wrap">
-
-
-	<!-- This sorts the walkers alphabetically by their last name -->
-	<% @walkers.sort! do |a,b|
-		a.l_name.downcase <=> b.l_name.downcase
-	end %>
 	
-	<!-- This will populate the number of tabs based on the people that are in the database -->
-	<% @walkers.each do |w|%> 
 
-		<div class="walker-bio">
+		<!-- This sorts the walkers alphabetically by their last name -->
+		<% @walkers.sort! do |a,b|
+			a.l_name.downcase <=> b.l_name.downcase
+		end %>
+		
+		<!-- This will populate the number of tabs based on the people that are in the database -->
+		<% @walkers.each do |w|%> 
 
-			<div class="walker-nametag">
-				<img class="walker-pic" src="<%= w.pic %>">
-				<%= w.f_name %> <%= w.l_name %>
-			</div>
+			<div class="walker-bio">
 
-			<div class="walker-bio-box">
-				<img class="bio-pic" src="<%= w.pic %>">
-				<div class="about-walker">
-					<p class="walker-name"><%= w.f_name %> <%= w.l_name %></p>
-					<p><span class="topic">Introduction: </span><span class="answer">"<%= w.comments%>"</span></p>
-					<p><span class="topic">Experience: </span><span class="answer"><%= w.experience%></span></p>
-					<p><span class="topic">Neighborhoods: </span><span class="answer"><%= w.location%></span></p>
+				<div class="walker-nametag">
+					<img class="walker-pic" src="<%= w.pic %>">
+					<%= w.f_name %> <%= w.l_name %>
 				</div>
-			</div>
 
-		</div>
-	<%end%>
-</div>
+				<div class="walker-bio-box">
+					<img class="bio-pic" src="<%= w.pic %>">
+					<div class="about-walker">
+						<p class="walker-name"><%= w.f_name %> <%= w.l_name %></p>
+						<p><span class="topic">Introduction: </span><span class="answer">"<%= w.comments%>"</span></p>
+						<p><span class="topic">Experience: </span><span class="answer"><%= w.experience%></span></p>
+						<p><span class="topic">Neighborhoods: </span><span class="answer"><%= w.location%></span></p>
+					</div>
+				</div>
+
+			</div>
+		<%end%>
+	</div>
 
 <div class="buffer">
 	</div>

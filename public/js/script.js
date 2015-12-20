@@ -1,8 +1,8 @@
 $(document).ready(function() {
-  $("#big-dog").animate({left: '130%'}, 6200); 
-  $("#little-dog").animate({left: '130%'}, 8300);
-
-
+  $("#big-dog").animate({left: '120%'}, 6200); 
+  $("#little-dog").animate({left: '120%'}, 8000);
+  $("#little-dog").fadeOut(); 
+  $("#big-dog").fadeOut(); 
 
   console.log("run");
   $('.walker-bio-box').hide();
