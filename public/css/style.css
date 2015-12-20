@@ -2,6 +2,7 @@
 
 body {
 	background-color: #ffffff;
+	
 }
 
 /*navbar feature*/
@@ -21,7 +22,7 @@ nav {
 	float: right;
 	text-transform: uppercase;
 	letter-spacing: 0.075em;
-	margin: 70px 20px 0px 0px;
+	margin-top: 10px;
 }
 #menu_pages {
 	/*display: inline-block;*/
@@ -35,8 +36,8 @@ nav {
 }
 #logo {
 	width: 15%;
-	margin-bottom: -8%;
-	margin-left: 8%;
+	/*margin-bottom: -8%;*/
+	margin-left: 4%;
 	margin-bottom: 2px;
 }
 a:visited {
@@ -46,47 +47,51 @@ a:hover {
 	text-decoration: none;
 }
 
-footer {
-	clear: both;
-	background-color: rgba(114, 114, 114, 0.5);
-	height: 100px;
-	width: 100%;
-	display: inline-block;
-}
 
 /*Created to space out the body from behind the nav bar*/
 
 #upper-spacer{
-	margin: 0px, auto;
+	/*margin: 0px, auto;
 	width: 100%;
-	height: 200px;
+	height: 100px;*/
 
 	/*position: absolute;*/
 
+	color: #ffffff;
+	background-color: #0f445e;
+	height: 17%;
+	position: relative;
+	width: 100%;
+	z-index: 1;
+	box-shadow: 0 5px 0px rgba(0,0,0,0.4); 
+
+}
+
+.buffer {
+	height: 200px;
 }
 
 .body-wrap {
-	vertical-align: 200px;
+	/*vertical-align: 15%;*/
 	width: 800px;
 	margin: 0 auto;
+	/*margin-top: 15%;*/
 }
 
-/*.walker-bio {
-	width: 500px;
-}*/
+
 /*hide while figuring out formatting of toggle for walkers page*/
 
 .walker-pic{
 	border-radius: 100%;
-	width: 25px;
+	width: 30px;
 	margin-right: 10px;
 }
 
-.walker-nametag:img{
+/*.walker-nametag:img{
 	border-radius: 100%;
 	width: 25px;
 	margin-right: 10px;
-}
+}*/
 
 .bio-pic {
 	width: 25%;
@@ -102,7 +107,7 @@ footer {
 	padding: 3px;
 	margin: 0 auto;
 	border-radius: .9;
-	font-size: 25px;
+	font-size: 30px;
 	font-family: cursive;
 	font-weight: 2;
 	color: #727272;
@@ -201,6 +206,24 @@ footer {
 	font-family: 'Pathway Gothic One', sans-serif;
 	text-transform: uppercase;
 }
+.services_description, tr {
+	color: #000000;
+	background-color: rgba(225, 225, 225, 0.5);
+	padding: 4px;
+}
+.title {
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 1em;
+}
+.sub-title {
+	font-size: 0.75em;
+}
+.price {
+	font-weight: bold;
+	color: #b74506;
+	font-size: 1.15em;
+}
 
 /*hamburger dropdown menu */
 
@@ -241,19 +264,35 @@ footer {
 	opacity: 0.9;
 }
 
-
-
-
 /*Dog running*/
 
 #dog-run1{
 vertical-align: -180px;
 position: relative;
-margin-left: -20px
+margin-left: -20px;
 }
 
 #dog-run2{
 vertical-align: -170px;
 position: relative;
-margin-left: -800px
+margin-left: -800px;
+width: 100px;
+}
+
+/*footer*/
+
+footer {
+	clear: both;
+	background-color: rgba(114, 114, 114, 0.5);
+	height: 100px;
+	width: 100%;
+	display: inline-block;
+	text-align: center;
+	margin-top: 40px;
+}
+.footer-text {
+	font-weight: bold;
+	color: #0f445e;
+	font-size: 1em;
+	padding-top: 40px;
 }

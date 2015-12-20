@@ -3,6 +3,7 @@ $(document).ready(function() {
   $("#dog-run2").animate({left: '175%'}, 5200);
 
 
+
   console.log("run");
   $('.walker-bio-box').hide();
   

@@ -1,6 +1,9 @@
-<!-- KNS - inserted new div for spacing after having issues with CSS -->
+<!-- KNS - inserted new div for spacing after having issues with CSS of header-->
 
-<div id="upper-spacer">
+<!-- <div id="upper-spacer"></div> -->
+
+
+<div id="buffer">
 	<!-- ===Dog Running=== -->
 	<img id="dog-run1" src="images/walkdog.gif">
 	<img id="dog-run2" src="images/walkdog.gif">
@@ -9,7 +12,7 @@
 
 <div class="body-wrap">
 
-	<div id="upper-spacer"></div>
+	
 
 	<!-- This sorts the walkers alphabetically by their last name -->
 	<% @walkers.sort! do |a,b|
@@ -39,3 +42,6 @@
 		</div>
 	<%end%>
 </div>
+
+<div class="buffer">
+	</div>
