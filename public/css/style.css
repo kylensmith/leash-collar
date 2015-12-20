@@ -296,3 +296,22 @@ footer {
 	font-size: 1em;
 	padding-top: 40px;
 }
+
+/*footer*/
+
+footer {
+	clear: both;
+	background-color: rgba(114, 114, 114, 0.5);
+	height: 100px;
+	width: 100%;
+	display: inline-block;
+	text-align: center;
+	margin-top: 40px;
+}
+.footer-text {
+	font-weight: bold;
+	color: #0f445e;
+	font-size: 1em;
+	padding-top: 40px;
+}
+

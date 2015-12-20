@@ -14,23 +14,20 @@ $(document).ready(function() {
 
 // slideshow
 
-$("#slideshow > div:gt(0)").hide();
+  $("#slideshow > div:gt(0)").hide();
 
-setInterval(function() { 
-  $('#slideshow > div:first')
-    .fadeOut(5000)
-    .next()
-    .fadeIn(5000)
-    // .delay(1000)
-    .end()
-    .appendTo('#slideshow');
-},  3000);
-
-
+  setInterval(function() { 
+    $('#slideshow > div:first')
+      .fadeOut(5000)
+      .next()
+      .fadeIn(5000)
+      .end()
+      .appendTo('#slideshow');
+  },  3000);
 
 // hamburger menu
 
-jQuery(function($){
+  jQuery(function($){
      $( '.menu-btn' ).click(function(){
      $('.responsive-menu').toggleClass('expand')
      })
