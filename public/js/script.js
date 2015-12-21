@@ -1,6 +1,6 @@
 $(document).ready(function() {
-  $("#big-dog").animate({left: '120%'}, 6200); 
-  $("#little-dog").animate({left: '120%'}, 8000);
+  $("#little-dog").animate({left: '125%'}, 20000, "linear");
+  $("#big-dog").animate({left: '120%'}, 4200); 
   $("#little-dog").fadeOut(); 
   $("#big-dog").fadeOut(); 
 

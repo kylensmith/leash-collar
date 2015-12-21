@@ -1,20 +1,6 @@
 require 'sinatra'
 
 
-require 'sendgrid-ruby'
-# As a hash 
-client = SendGrid::Client.new(api_user: ENV['SENDGRID_USERNAME'], api_key: ENV['SENDGRID_PASSWORD'])
-
-# Or as a block 
-client = SendGrid::Client.new do |c|   
-	c.api_user = ENV['SENDGRID_USERNAME']   
-	c.api_key = ENV['SENDGRID_PASSWORD'] 
-end
-# or as a block with the API key only # 
-client = SendGrid::Client.new do |c|   
-	c.api_key = ENV['SENDGRID_API_KEY'] 
-end
-
 
 get '/' do
 	@title ='Leash & Collar'
@@ -70,14 +56,44 @@ end
 get '/contact' do
 	@title = "Conatct"
 
+
 	erb :contact
 end
 
-get '/form' do
-	@title = "Conatct"
 
-	erb :form
-end
+
+
+
+post '/contact' do      
+	puts params.inspect
+    @name = params[:name]
+    @email = params[:email]
+    @message = params[:message]
+   	# mail_to(@email)
+    @reply = "Thank you for contacting us, " + @name + ".  We will be in contact shortly."
+    erb :contact
+  end
+
+# issues with contact form so editing out
+
+# def mail_to(email)
+
+# 	client = SendGrid::Client.new do |c|   
+# 		c.api_key = ENV['SENDGRID_API_KEY'] 
+# 	end
+
+# 	mail = SendGrid::Mail.new do |m|   
+# 		m.to = email  
+# 		m.from = 'smith.kylen@gmail.com'   
+# 		m.subject = 'Online - Contact Form'   
+# 		m.text = @message
+# 	end
+
+# 	res = client.send(mail) 
+# 	puts res.code 
+# 	puts res.body
+
+# end
 
 
 

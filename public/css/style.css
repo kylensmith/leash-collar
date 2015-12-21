@@ -67,9 +67,11 @@ a:hover {
 }
 
 
-
+.body-wrap p {
+	font-size: 22px;
+}
 .body-wrap {
-	
+	text-align: center;
 	width: 800px;
 	margin: 0 auto;
 }
@@ -266,15 +268,63 @@ a:hover {
 vertical-align: -180px;
 position: relative;
 margin-left: -10%;
+z-index: 13;
 }
 
 #little-dog{
 vertical-align: -170px;
 position: relative;
-margin-left: -10%;
+margin-left: -5%;
 width: 90px;
+z-index: 5;
 }
 
+/*contact form*/
+
+#email {
+	/*width: 60%;*/
+	height: 100%;
+	margin: 0 auto;
+	font-size: 16px;
+	text-align: left;
+	padding: 0px 20px 20px 20px;
+	box-shadow: 10px 10px 5px #888888;
+	background-color: #0f445e;
+	color: #ffffff;
+	font-family: 'Pathway Gothic One', sans-serif;
+	text-transform: uppercase;
+}
+
+.input-box {
+	color: #4c767e; 
+	border-width: 2px; 
+	border-style: ridge; 
+	border-color: #888888; 
+	font-style: normal; 
+	font-family: 'Pathway Gothic One', sans-serif;
+	font-weight: normal; 
+	font-size:16px; 
+	width: 200px; 
+	margin-bottom: 18px;
+}
+
+#message {
+	color: #4c767e; 
+	border-width: 2px; 
+	border-style: ridge; 
+	border-color: #888888; 
+	font-style: normal; 
+	font-family: 'Pathway Gothic One', sans-serif;
+	font-weight: normal; 
+	font-size:16px; 
+	height: 126px; 
+	width: 560px; 
+	background-color: #fff
+}
+
+#button {
+	background-color: #4c767e; 
+}
 
 /*footer*/
 

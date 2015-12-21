@@ -1,39 +1,47 @@
 <!-- KNS - inserted new div for spacing after having issues with CSS -->
 
-<div id="upper-spacer"></div>
-<div class="body-wrap">
-	<form method="POST" action="/contact">   
-
-		<input type="text" name="name"><select>
-  <option>Customer Service</option>
-  <option>General Information</option>
-  <option>Join our team!</option>
-  
-
-  <option>test</option>
-		<label for="name">Name</label>   
-		<input type="text" name="name">   
-		<label for="comment">Comment</label>   
-		<input type="comment" name="comment">   
-		<input type="submit"> 
-	</form>
-
+<div id="upper-spacer">
+	
 </div>
 
+<!-- Strutting dog... -->
+<div class="running">
+	
+	<img id="little-dog" src="images/dog-motion.gif">
+</div>
+
+<div class="body-wrap">
+	
+
+	
+
+	<p><%= @reply %></p>
 
 
-<select>
-  <option>Customer Service</option>
-  <option>General Information</option>
-  <option>Join our team!</option>
-  
+	<div id="email">
 
-  <option>test</option>
-  
-</select>
+		<br>
+		<h1>Contact Leash & Collar</h1>
+		<form method="POST" action="/contact">  
 
+			<label for="name">Name</label>   
 
+			<br>
+			<input type="text" name="name" class="input-box"> 
 
+			<br>
 
+			<label for="email">email</label> 
+			<br>  
+			<input type="text" name="email" class="input-box"> 
+			<br>
+			<label for="comment">Comment</label> 
+			<br>  
+			<textarea name="message" id="message"></textarea>  
 
+			<br>
+			<input id="button" type="submit"> 
+		</form>
+	</div>
 
+</div>
