@@ -1,4 +1,5 @@
-<!-- KNS - inserted new div for spacing after having issues with CSS -->
+
+
 
 <div id="upper-spacer">
 	
@@ -13,35 +14,28 @@
 <div class="body-wrap">
 	
 
-	
-
-	<p><%= @reply %></p>
 
 
+	<!-- email form -->
 	<div id="email">
-
+		<h1>Contact Us Today!</h1>
+		<h3>We'd love to hear from you!</h3>
 		<br>
-		<h1>Contact Leash & Collar</h1>
-		<form method="POST" action="/contact">  
-
-			<label for="name">Name</label>   
-
+		<form action="/contact" method="POST">
+			<label for="email">Email</label>
 			<br>
-			<input type="text" name="name" class="input-box"> 
-
+			<input type="text" name="email" class="input-box">
 			<br>
-
-			<label for="email">email</label> 
-			<br>  
-			<input type="text" name="email" class="input-box"> 
 			<br>
-			<label for="comment">Comment</label> 
-			<br>  
-			<textarea name="message" id="message"></textarea>  
-
+			<label for="message">Message</label>
 			<br>
-			<input id="button" type="submit"> 
+			<textarea type="text" name="message" id="message"></textarea>
+			<br>
+			<br>
+			<input id="button" type="submit">
 		</form>
 	</div>
+
+
 
 </div>

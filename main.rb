@@ -1,4 +1,5 @@
 require 'sinatra'
+require 'mandrill'
 
 
 
@@ -55,45 +56,42 @@ end
 
 get '/contact' do
 	@title = "Conatct"
+		erb :contact
+end
 
 
-	erb :contact
+post '/contact' do 
+	puts params.inspect
+	email = params["email"]
+	user_message = params["message"]
+	puts "sending email!!!"
+	api_key = ENV['MANDRILL_APIKEY']
+	m = Mandrill::API.new "#{api_key}"
+	message = {
+		:subject=> "New Message",
+		:from_name=> email,
+		:text=>"New Message: " + user_message,
+		:to=>[
+ 				{
+ 					:email=> "erin.mahon14@gmail.com", 
+ 					:name=> "Erin Mahon"
+ 				}
+ 			],
+ 		:html=>"<html><h1>New Message</h1><h3>#{user_message}</h3></html>",
+ 		:from_email=>"erin.mahon14@gmail.com"
+	}
+	sending = m.messages.send message
+	puts sending
+	redirect to('/')	
 end
 
 
 
 
 
-post '/contact' do      
-	puts params.inspect
-    @name = params[:name]
-    @email = params[:email]
-    @message = params[:message]
-   	# mail_to(@email)
-    @reply = "Thank you for contacting us, " + @name + ".  We will be in contact shortly."
-    erb :contact
-  end
 
-# issues with contact form so editing out
 
-# def mail_to(email)
 
-# 	client = SendGrid::Client.new do |c|   
-# 		c.api_key = ENV['SENDGRID_API_KEY'] 
-# 	end
-
-# 	mail = SendGrid::Mail.new do |m|   
-# 		m.to = email  
-# 		m.from = 'smith.kylen@gmail.com'   
-# 		m.subject = 'Online - Contact Form'   
-# 		m.text = @message
-# 	end
-
-# 	res = client.send(mail) 
-# 	puts res.code 
-# 	puts res.body
-
-# end
 
 
 
