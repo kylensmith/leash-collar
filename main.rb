@@ -1,4 +1,5 @@
 require 'sinatra'
+require 'mandrill'
 
 
 require 'sendgrid-ruby'
@@ -69,9 +70,34 @@ end
 
 get '/contact' do
 	@title = "Conatct"
-
-	erb :contact
+		erb :contact
 end
+
+post '/contact' do 
+	puts params.inspect
+	email = params["email"]
+	user_message = params["message"]
+	puts "sending email!!!"
+	api_key = ENV['MANDRILL_APIKEY']
+	m = Mandrill::API.new "#{api_key}"
+	message = {
+		:subject=> "New Message",
+		:from_name=> email,
+		:text=>"New Message: " + user_message,
+		:to=>[
+ 				{
+ 					:email=> "erin.mahon14@gmail.com", 
+ 					:name=> "Erin Mahon"
+ 				}
+ 			],
+ 		:html=>"<html><h1>New Message</h1><h3>#{user_message}</h3></html>",
+ 		:from_email=>"erin.mahon14@gmail.com"
+	}
+	sending = m.messages.send message
+	puts sending
+	redirect to('/')	
+end
+
 
 get '/form' do
 	@title = "Conatct"
