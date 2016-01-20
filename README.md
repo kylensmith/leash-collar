@@ -1,4 +1,4 @@
-This file will be about Leash & Collar, a website connecting dogs needing walks to people needing money who are willing to talk with dogs.
+Leash & Collar, a business website for a dog walking service.
 
 Kyle N. Smith
 Erin Mahon
